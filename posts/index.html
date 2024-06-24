@@ -31,13 +31,18 @@
 
     <header>
         <h1>POSTS PAGE</h1>
+        <a href="javascript:logout()">Logout</a>
     </header>
-
-    <main></main>
+    <div id="newPostForm">
+        <input type="text" id="messageElement" placeholder="Enter Message">
+        <button id="buttonPostMessage">Post Message</button>
+    </div>
+    <main>
+        <div id="messagesOutput">?</div>
+    </main>
 
     <footer></footer>
 
-    <!-- Page-specific code -->
-    <script src="./posts.js"></script>
 </body>
+<script src="./posts.js"></script>
 </html>

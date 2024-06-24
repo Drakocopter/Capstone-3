@@ -18,22 +18,23 @@
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="./landing.css">
 
-    <title>Login to the Microblog Network!</title>
+    <title>Microblog Login</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="./auth.js"></script>
     <script>
-        if (isLoggedIn() === true) window.location.replace("/posts");
+        //if (isLoggedIn() === true) window.location.replace("/posts");
     </script>
 </head>
 <body>
 
     <header>
         <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+        <a href="/register/">Register</a>
     </header>
 
     <main>
-
+        <div id="errorMessage"></div>
         <form id="login">
             <div>
                 <label for="username">Username</label>
@@ -52,7 +53,8 @@
 
     <footer></footer>
 
-    <!-- Page-specific code -->
-    <script src="./landing.js"></script>
+    
 </body>
+<!-- Page-specific code -->
+    <script src="./landing.js"></script>
 </html>
