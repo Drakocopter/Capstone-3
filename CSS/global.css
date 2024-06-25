@@ -20,15 +20,31 @@
 nav {
     background-image: url(../Images/superlightnationalwalnuttexture.jpg);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-size: contain;
     align-items: center;
 }
 
+a{
+    font-family: "Reenie Beanie";
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+}
+a:hover{
+    color: grey;
+}
+button span{
+    color: rgb(255, 255, 255);
+    }
+button span:hover{
+color: grey;
+}
 .material-symbols-outlined {
+    font-size: 3em;
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 48
 }

@@ -17,8 +17,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../CSS/global.css">
 
     <!-- Page-specific CSS -->
@@ -38,19 +38,33 @@
     <header>
         <nav>
             <h1>POSTS PAGE</h1>
-            <div id="newPostForm">
-                <input type="text" id="messageElement" placeholder="Enter Message">
-                <button id="buttonPostMessage">Post Message</button>
+            <div>
+                <button type="button" id="addPostButton" class="btn" data-bs-toggle="modal" data-bs-target="#addNoteModal"><img
+                        src="../Images/add_circle_48dp_FILL0_wght400_GRAD0_opsz48.svg" alt=""><span class="material-symbols-outlined">
+                            add_circle
+                            </span></button>
+                <a href="javascript:logout()">Logout</a>
             </div>
-            <a href="javascript:logout()">Logout</a>
-           <button class="material-symbols-outlined">
-                add_circle
-           </button>
         </nav>
     </header>
 
     <main class="corkboard">
         <div id="messagesOutput">?</div>
+
+        <!-- Add Sticky Modal -->
+        <div class="modal fade" id="addNoteModal" tabindex="-1" aria-labelledby="addNoteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNoteModalLabel">Add Note</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Your message here...">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer></footer>
