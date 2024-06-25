@@ -9,49 +9,102 @@
 //   -d '{
 //   "text": "string"
 // }'
-buttonPostMessage.addEventListener("click", e => {
-    fetch(apiBaseURL + "/api/posts", {
+function like(postId) {
+    fetch(apiBaseURL + "/api/likes", {
         method: "POST",
-        mode: "cors", // cors, no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, 
-        credentials: "same-origin",
-        header: {
+        headers: {
             accept: "application/json",
             "Content-Type": "application/json",
             Authorization: "Bearer " + localStorage.token
         },
-        body: JSON.stringify({
-            text: messageElement.value
-        })
+        body: JSON.stringify({ postId: postId })
     }).then(response => {
-        console.log(response);
-        location = "/posts/";  //force refresh
+        if (response.ok) {
+            console.log("Liked post:", postId);
+            location.reload();  // force refresh
+        } else {
+            console.error("Failed to like post:", response.statusText);
+        }
+    }).catch(error => {
+        console.error("Error liking post:", error);
+    });
+}
+
+document.getElementById("buttonPostMessage").addEventListener("click", e => {
+    fetch(apiBaseURL + "/api/posts", {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token
+        },
+        body: JSON.stringify({ text: document.getElementById("messageElement").value })
+    }).then(response => {
+        if (response.ok) {
+            console.log("Post created");
+            location.reload();  // force refresh
+        } else {
+            console.error("Failed to create post:", response.statusText);
+        }
+    }).catch(error => {
+        console.error("Error creating post:", error);
     });
 });
 
-function getMessage(message) {
+function truncateText(message) {
+    const maxLength = 44;
+    if (message.text.length > maxLength) {
+        return message.text.substring(0, maxLength) + "...";
+    }
+    return message.text;
+}
+
+function getMessage(message, index) {
     return `
-    <div>
-        <h1>${message.text}</h1>
-        <div class="username">${message.username}</div>
-    </div>
+        <li>
+            <button type="button" class="btn btn-sticky-note" data-bs-toggle="modal" data-bs-target="#modal${index}">
+                <h4 class="username">${message.username}</h4>
+                <div class="content">
+                    <p>${truncateText(message)}</p>
+                </div>
+            </button>
+            <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel${index}">${message.username}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ${message.text}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
     `;
 }
+
 function showMessages(messages) {
-    if (messages.hasOwnProperty("message")){
+    if (messages.hasOwnProperty("message")) {
         location = "/";
         return;
     }
-    messagesOutput.innerHTML = messages.map(getMessage).join("");
+    document.getElementById("messagesOutput").innerHTML = "<ul>" + messages.map((message, index) => getMessage(message, index)).join("") + "</ul>";
 }
 
 fetch(apiBaseURL + "/api/posts?limit=1000&offset=0", {
     method: "GET",
-    headers: { Authorization: `Bearer ${localStorage.token}` }
+    headers: { Authorization: "Bearer " + localStorage.token }
 }).then(response => {
-    if (response.statusCode >= 400) {
+    if (response.status >= 400) {
         console.log(response);
         location = "/";
     }
-    return response.json()
-}).then(showMessages);
+    return response.json();
+}).then(showMessages).catch(error => {
+    console.error("Error fetching posts:", error);
+});

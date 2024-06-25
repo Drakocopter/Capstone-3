@@ -1,1 +1,121 @@
-/* Posts Page CSS */
+.corkboard {
+    background-image: url(../images/depositphotos_14184241-stock-photo-cork-board-background.jpg);
+}
+
+body {
+    margin: 20px auto;
+    font-family: 'Lato';
+    background: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.username {
+    word-wrap: break-word;
+}
+
+svg {
+    float: right;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-dialog-scrollable {
+    max-height: calc(100% - 1rem);
+    overflow-y: auto;
+}
+
+.btn-sticky-note {
+    text-decoration: none;
+    color: #000;
+    background: rgb(255, 255, 204);
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transition: transform .15s linear;
+    overflow: hidden;
+}
+
+ul li {
+    margin: 1em;
+}
+
+ul li:nth-child(even) .btn-sticky-note {
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+ul li:nth-child(3n) .btn-sticky-note {
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+
+ul li:nth-child(5n) .btn-sticky-note {
+    transform: rotate(5deg);
+    position: relative;
+    top: 10px;
+    background: rgb(255, 203, 211);
+}
+
+ul li .btn-sticky-note:hover,
+ul li .btn-sticky-note:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+    text-decoration: none;
+}
+
+ul li:nth-child(even) .btn-sticky-note:hover,
+ul li:nth-child(even) .btn-sticky-note:focus {
+    background: #cfc;
+}
+
+ul li:nth-child(3n) .btn-sticky-note:hover,
+ul li:nth-child(3n) .btn-sticky-note:focus {
+    background: #ccf;
+}
+
+ul li:nth-child(5n) .btn-sticky-note:hover,
+ul li:nth-child(5n) .btn-sticky-note:focus {
+    background: rgb(255, 203, 211);
+}
+
+ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:hover,
+ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:focus {
+    background: rgb(255, 255, 204);
+}
