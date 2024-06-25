@@ -36,7 +36,7 @@ function login (loginData) {
         errorMessage.innerHTML = "";
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
             window.localStorage.token = loginData.token; //simple string
-            window.location.assign("/posts");  // redirect
+            window.location.assign("/HTML/posts.html");  // redirect
             return loginData;
     });
 }

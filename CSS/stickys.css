@@ -1,18 +1,3 @@
-.corkboard {
-    background-image: url(../images/depositphotos_14184241-stock-photo-cork-board-background.jpg);
-}
-
-body {
-    margin: 20px auto;
-    font-family: 'Lato';
-    background: #666;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 h2 {
     font-weight: bold;
     font-size: 2rem;
@@ -35,12 +20,15 @@ ul {
 }
 
 .username {
-    word-wrap: break-word;
+    font-size: 20px; /* Adjust the value as needed */
+    white-space: nowrap; /* Ensure the text does not wrap */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipses for overflow text */
+    font-weight: bold;
 }
-
-svg {
+/* svg {
     float: right;
-}
+} */
 
 .modal-dialog-centered {
     display: flex;
@@ -91,8 +79,7 @@ ul li:nth-child(5n) .btn-sticky-note {
     background: rgb(255, 203, 211);
 }
 
-ul li .btn-sticky-note:hover,
-ul li .btn-sticky-note:focus {
+ul li .btn-sticky-note:hover {
     box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
     transform: scale(1.25);
     position: relative;
@@ -115,7 +102,6 @@ ul li:nth-child(5n) .btn-sticky-note:focus {
     background: rgb(255, 203, 211);
 }
 
-ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:hover,
-ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:focus {
+ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:hover {
     background: rgb(255, 255, 204);
 }
