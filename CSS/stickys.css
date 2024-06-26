@@ -20,12 +20,17 @@ ul {
 }
 
 .username {
-    font-size: 20px; /* Adjust the value as needed */
-    white-space: nowrap; /* Ensure the text does not wrap */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Show ellipses for overflow text */
+    font-size: 20px;
+    /* Adjust the value as needed */
+    white-space: nowrap;
+    /* Ensure the text does not wrap */
+    overflow: hidden;
+    /* Hide overflow text */
+    text-overflow: ellipsis;
+    /* Show ellipses for overflow text */
     font-weight: bold;
 }
+
 /* svg {
     float: right;
 } */
@@ -44,7 +49,6 @@ ul {
 .btn-sticky-note {
     text-decoration: none;
     color: #000;
-    background: rgb(255, 255, 204);
     display: block;
     height: 10em;
     width: 10em;
@@ -54,6 +58,7 @@ ul {
     overflow: hidden;
 }
 
+
 ul li {
     margin: 1em;
 }
@@ -62,21 +67,18 @@ ul li:nth-child(even) .btn-sticky-note {
     transform: rotate(4deg);
     position: relative;
     top: 5px;
-    background: #cfc;
 }
 
 ul li:nth-child(3n) .btn-sticky-note {
     transform: rotate(-3deg);
     position: relative;
     top: -5px;
-    background: #ccf;
 }
 
 ul li:nth-child(5n) .btn-sticky-note {
     transform: rotate(5deg);
     position: relative;
     top: 10px;
-    background: rgb(255, 203, 211);
 }
 
 ul li .btn-sticky-note:hover {
@@ -87,6 +89,7 @@ ul li .btn-sticky-note:hover {
     text-decoration: none;
 }
 
+/* 
 ul li:nth-child(even) .btn-sticky-note:hover,
 ul li:nth-child(even) .btn-sticky-note:focus {
     background: #cfc;
@@ -100,8 +103,27 @@ ul li:nth-child(3n) .btn-sticky-note:focus {
 ul li:nth-child(5n) .btn-sticky-note:hover,
 ul li:nth-child(5n) .btn-sticky-note:focus {
     background: rgb(255, 203, 211);
+} */
+
+/* ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:hover {
+    background: rgb(255, 255, 204);
+} */
+ul li .btn-sticky-note.c0,
+ul li .btn-sticky-note.c0:hover {
+    background: #cfc;
 }
 
-ul li:not(:nth-child(even)):not(:nth-child(3n)):not(:nth-child(5n)) .btn-sticky-note:hover {
+ul li .btn-sticky-note.c1,
+ul li .btn-sticky-note.c1:hover {
     background: rgb(255, 255, 204);
+}
+
+ul li .btn-sticky-note.c2,
+ul li .btn-sticky-note.c2:hover {
+    background: #ccf;
+}
+
+ul li .btn-sticky-note.c3,
+ul li .btn-sticky-note.c3:hover {
+    background: rgb(255, 203, 211);
 }

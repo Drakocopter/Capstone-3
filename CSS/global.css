@@ -48,3 +48,12 @@ color: grey;
   'GRAD' 0,
   'opsz' 48
 }
+.title{
+    color: white;
+    font-family: "Reenie Beanie";
+    /* font-weight: 500; */
+}
+.corkboard {
+    background-image: url(../Images/depositphotos_14184241-stock-photo-cork-board-background.jpg);
+    height: 100vh;
+}

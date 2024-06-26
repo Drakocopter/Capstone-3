@@ -1,10 +1,5 @@
-.corkboard {
-    background-image: url(../Images/depositphotos_14184241-stock-photo-cork-board-background.jpg);
-}
-
-body {
-    font-family: 'Lato';
-
+.corkboard{
+    height: 100%;
 }
 
 * {
@@ -12,8 +7,6 @@ body {
     padding: 0;
 }
 
-h1{
-    color: white;
-    font-family: "Reenie Beanie";
-    /* font-weight: 500; */
-}
+/* .modal-content{
+    background-color: yellow;
+} */

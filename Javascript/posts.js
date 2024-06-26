@@ -29,31 +29,30 @@ function like(postId) {
         console.error("Error liking post:", error);
     });
 }
-//Fix when applicable
 
-// document.getElementById("buttonPostMessage").addEventListener("click", e => {
-//     fetch(apiBaseURL + "/api/posts", {
-//         method: "POST",
-//         mode: "cors",
-//         cache: "no-cache",
-//         credentials: "same-origin",
-//         headers: {
-//             accept: "application/json",
-//             "Content-Type": "application/json",
-//             Authorization: "Bearer " + localStorage.token
-//         },
-//         body: JSON.stringify({ text: document.getElementById("messageElement").value })
-//     }).then(response => {
-//         if (response.ok) {
-//             console.log("Post created");
-//             location.reload();  // force refresh
-//         } else {
-//             console.error("Failed to create post:", response.statusText);
-//         }
-//     }).catch(error => {
-//         console.error("Error creating post:", error);
-//     });
-// });
+document.getElementById("buttonPostMessage").addEventListener("click", e => {
+    fetch(apiBaseURL + "/api/posts", {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token
+        },
+        body: JSON.stringify({ text: document.getElementById("messageElement").value })
+    }).then(response => {
+        if (response.ok) {
+            console.log("Post created");
+            location.reload();  // force refresh
+        } else {
+            console.error("Failed to create post:", response.statusText);
+        }
+    }).catch(error => {
+        console.error("Error creating post:", error);
+    });
+});
 
 function showMessages(messages) {
     if (messages.hasOwnProperty("message")) {
