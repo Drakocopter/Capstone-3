@@ -2,6 +2,25 @@
 
 "use strict";
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     fetchPosts();
+// });
+
+// function fetchPosts() {
+//     fetch(apiBaseURL + "/api/posts", {
+//         method: "GET",
+//         headers: {
+//             accept: "application/json",
+//             Authorization: "Bearer " + localStorage.token
+//         }
+//     }).then(response => response.json())
+//     .then(data => {
+//         const messagesOutput = document.getElementById('messagesOutput');
+//         messagesOutput.innerHTML = data.map((message, index) => getMessage(message, index)).join('');
+//     })
+//     .catch(error => console.error("Error fetching posts:", error));
+// }
+
 function like(postId) {
     fetch(apiBaseURL + "/api/likes", {
         method: "POST",
