@@ -9,7 +9,7 @@ btnProfile.addEventListener("click", () => {
         body: JSON.stringify({ bio: bioInput.value })
     }).then(response => {
         console.log(response);
-        location = "/profile/";  //force refresh
+        location = "../HTML/profile.html";  //force refresh
     });
 });
 

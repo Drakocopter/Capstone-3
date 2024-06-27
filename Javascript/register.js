@@ -21,7 +21,7 @@ function register() {
             fullName: fullname.value,
             password: password.value
         })
-    }).then(() => location = "/"); //TODO check for failure
+    }).then(() => location = "./login.html"); //TODO check for failure
 }
 
 registerButton.addEventListener("click", register)

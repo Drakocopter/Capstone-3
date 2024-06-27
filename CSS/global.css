@@ -20,7 +20,7 @@
 nav {
     background-image: url(../Images/superlightnationalwalnuttexture.jpg);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-size: contain;
     align-items: center;
 }
@@ -51,7 +51,11 @@ color: grey;
 .title{
     color: white;
     font-family: "Reenie Beanie";
-    /* font-weight: 500; */
+    font-size: 3rem;
+}
+.title:hover{
+    color: grey;
+    font-family: "Reenie Beanie";
 }
 .corkboard {
     background-image: url(../Images/depositphotos_14184241-stock-photo-cork-board-background.jpg);

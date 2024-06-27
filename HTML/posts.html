@@ -37,15 +37,11 @@
 <body>
     <header>
         <nav>
-            <h1 class="title">POSTS</h1>
-            <div>
-                <button type="button" id="addPostButton" class="btn" data-bs-toggle="modal"
-                    data-bs-target="#addNoteModal"><img src="../Images/add_circle_48dp_FILL0_wght400_GRAD0_opsz48.svg"
-                        alt=""><span class="material-symbols-outlined">
-                        add_circle
-                    </span></button>
+            <a href="#">POSTS</a>
+                    <button type="button" id="addPostButton" class="btn" data-bs-toggle="modal"
+                        data-bs-target="#addNoteModal"><h1 class="title">Post Message</h1></button>
+                <a href="./profile.html">Profile</a>
                 <a href="javascript:logout()">Logout</a>
-            </div>
         </nav>
     </header>
 
@@ -55,7 +51,7 @@
         <!-- Add Sticky Modal -->
         <div class="modal fade" id="addNoteModal" tabindex="-1" aria-labelledby="addNoteModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content" >
+                <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="addNoteModalLabel">Add Note</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

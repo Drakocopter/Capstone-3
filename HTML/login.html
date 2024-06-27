@@ -20,7 +20,7 @@
 
     <!-- CSS (GLOBAL FIRST!) -->
     <link rel="stylesheet" href="../CSS/global.css">
-    <link rel="stylesheet" href="../CSS/landing.css">
+    <link rel="stylesheet" href="../CSS/login.css">
 
     <title>Microblog Login</title>
 
@@ -41,20 +41,32 @@
     </header>
 
     <main class="corkboard">
-        <div id="errorMessage"></div>
-        <form id="login">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" minlength="3">
+        <div class="noteArea">
+            <div class="backgroundNote0">
+                <div class="backgroundNote1">
+                    <div class="backgroundNote2">
+                        <div class="registerNote">
+                            <h1 class="noteTitle">Login</h1>
+                            <form id="login">
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" minlength="3">
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" minlength="6">
+                                </div>
+                                <div class="buttonArea">
+                                    <button class="btn btn-success" id="loginButton" type="submit">Login</button>
+                                </div>
+                                <div id="errorMessage"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" minlength="6">
-            </div>
-
-            <button id="loginButton" type="submit">Login</button>
-        </form>
 
     </main>
 </body>

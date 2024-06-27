@@ -1,0 +1,50 @@
+/* Register Page CSS */
+.registerNote {
+    background-color: rgb(255, 203, 211);
+    padding: 2rem;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    border-radius: 1rem;
+    transform: rotate(7deg);
+}
+
+.backgroundNote0 {
+    background-color: #cfc;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(-7deg);
+}
+
+.backgroundNote1 {
+    background-color: rgb(222, 204, 255);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(3deg);
+    margin-left: .3rem;
+}
+
+.backgroundNote2 {
+    background-color: rgb(255, 255, 204);
+    border-radius: 1rem;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    margin-left: .6rem;
+
+}
+
+.noteTitle {
+    color: black;
+    text-align: center;
+}
+
+.noteArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.buttonArea {
+display: flex;
+justify-content: center;
+margin-top: 5px;
+}
