@@ -14,7 +14,7 @@ btnProfile.addEventListener("click", () => {
 });
 
 function showProfile(data){
-    bioElement.innerHTML = data.bio;
+    bioElement.innerHTML = `Current Bio: ${data.bio}`;
     bioInput.value = data.bio;
 }
 
