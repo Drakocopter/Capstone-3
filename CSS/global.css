@@ -53,10 +53,7 @@ color: grey;
     font-family: "Reenie Beanie";
     font-size: 3rem;
 }
-.title:hover{
-    color: grey;
-    font-family: "Reenie Beanie";
-}
+
 .corkboard {
     background-image: url(../Images/depositphotos_14184241-stock-photo-cork-board-background.jpg);
     height: 100vh;
