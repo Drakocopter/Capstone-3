@@ -1,14 +1,7 @@
 /* Posts Page JavaScript */
 
 "use strict";
-// curl -X 'POST' \
-//   'http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts' \
-//   -H 'accept: application/json' \
-//   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtldmluZWxvbmciLCJpYXQiOjE3MTg5OTA5MTgsImV4cCI6MTcxOTA3NzMxOH0.Kk6YxYzdAaagLSu0az1Jfz7nQ3k23ayIdW3vnpNbwIo' \
-//   -H 'Content-Type: application/json' \
-//   -d '{
-//   "text": "string"
-// }'
+
 function like(postId) {
     fetch(apiBaseURL + "/api/likes", {
         method: "POST",
@@ -21,7 +14,6 @@ function like(postId) {
     }).then(response => {
         if (response.ok) {
             console.log("Liked post:", postId);
-            location.reload();  // force refresh
         } else {
             console.error("Failed to like post:", response.statusText);
         }
