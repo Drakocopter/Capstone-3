@@ -10,5 +10,14 @@
 .modal-content{
     background-color: rgb(255, 255, 204);
 }
-
-
+.titleButton{
+    color: white;
+    font-family: "Reenie Beanie";
+    font-size: 3rem;
+}
+.titleButton:hover{
+    color: grey;
+}
+.btn.btn-like{
+    float: right;
+}
