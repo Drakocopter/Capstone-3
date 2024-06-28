@@ -1,5 +1,7 @@
-# Enjoy the Microblog Project and the MicroblogLite API!
+# Capstone 3
 
-Don't forget to read the [*MicroblogLite* API docs](http://microbloglite.us-east-2.elasticbeanstalk.com/docs) and experiment with the API in *Postman!*
+I built and stylized a Microblog project for the front-end development class. Here are some screenshots from the project.
 
-Practice and experimentation provide experience, and experience provides confidence.
+# Login Page [Login Page](./HTML/login.html) ![Login Picture](<./Images/README Screenshots/loginpage.png>)
+
+Here is my login page. It's 
